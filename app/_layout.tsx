@@ -1,20 +1,19 @@
-
-import { Stack } from "expo-router";
+import {Stack} from "expo-router";
 import {useFonts} from "expo-font";
 
 export default function RootLayout() {
 
     useFonts({
         'outfit-bold': require('./../assets/fonts/Outfit-Bold.ttf'),
-        'outfit-medium': require('./../assets/fonts/Outfit-Medium.ttf'),
         'outfit-regular': require('./../assets/fonts/Outfit-Regular.ttf'),
+        'outfit-medium': require('./../assets/fonts/Outfit-Medium.ttf'),
 
     })
 
     return (
         <Stack>
             <Stack.Screen name="index" options={{
-                headerShown:false
+                headerShown: false
             }}/>
         </Stack>
     );

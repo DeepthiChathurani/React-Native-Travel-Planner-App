@@ -1,8 +1,12 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Colors} from "@/constants/Colors";
+import {useRouter} from "expo-router";
 
 export default function Login() {
+
+    const router = useRouter();
+
     return (
         <View>
             <Image source={require('../assets/images/login.jpeg')}
@@ -21,23 +25,25 @@ export default function Login() {
 
                 <Text style={{
                     fontSize: 22,
-                    fontFamily: 'outfit-medium',
+                    fontFamily: 'outfit-regular',
                     textAlign: 'center',
                     color: Colors.GRAY,
                     marginTop: 30
                 }}>
-                    Discover your next adventure effortlessly.Personalized itineraries at your fingertips,
-                    Travel smarter with  AI-driven insights.
+                    Discover your next adventure effortlessly. Personalized itineraries at your fingertips,
+                    Travel smarter with AI-driven insights.
                 </Text>
 
-                <View style={styles.button}>
+                <TouchableOpacity style={styles.button}
+                                  onPress={() => router.push("auth/sign-in")}
+                >
                     <Text style={{
                         color: Colors.WHITE,
                         textAlign: 'center',
                         fontSize: 18,
                         fontFamily: 'outfit-medium',
-                    }}>Sign In With Google</Text>
-                </View>
+                    }}>Get Started</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -45,7 +51,7 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.WHITE,
-        marginTop:-10,
+        marginTop: -10,
         borderTopRightRadius: 20,
         borderTopLeftRadius: 20,
         height: '50%',
