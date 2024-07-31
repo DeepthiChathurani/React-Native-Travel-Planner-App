@@ -28,7 +28,7 @@ export default function Login() {
                     fontFamily: 'outfit-regular',
                     textAlign: 'center',
                     color: Colors.GRAY,
-                    marginTop: 30
+                    marginTop: 20
                 }}>
                     Discover your next adventure effortlessly. Personalized itineraries at your fingertips,
                     Travel smarter with AI-driven insights.
@@ -51,7 +51,7 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.WHITE,
-        marginTop: -10,
+        marginTop: -20,
         borderTopRightRadius: 20,
         borderTopLeftRadius: 20,
         height: '50%',
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: Colors.PRIMARY,
         borderRadius: 99,
-        marginTop: '20%'
+        marginTop: '18%'
     }
 })
 
