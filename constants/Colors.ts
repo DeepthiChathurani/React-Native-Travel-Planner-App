@@ -10,8 +10,10 @@ export const Colors = {
     WHITE: '#fff',
     PRIMARY: '#0651ce',
     GRAY: '#7d7d7d',
-    Yellow:'#8cc206',
+    Lime:'#8cc206',
     Black:'#11181C',
+    ORANGE:'#de8107',
+
     light: {
         text: '#11181C',
         background: '#fff',

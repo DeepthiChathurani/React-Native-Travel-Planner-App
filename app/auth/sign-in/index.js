@@ -109,7 +109,7 @@ export default function SignIn() {
             <TouchableOpacity onPress={onSignIn}
                               style={{
                                   padding: 20,
-                                  backgroundColor: Colors.Yellow,
+                                  backgroundColor: Colors.Lime,
                                   borderRadius: 15,
                                   marginTop: 50
                               }}>
