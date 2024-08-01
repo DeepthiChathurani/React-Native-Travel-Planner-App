@@ -13,6 +13,7 @@ export const Colors = {
     Lime:'#8cc206',
     Black:'#11181C',
     ORANGE:'#de8107',
+    LIGHT_GRAY:'#b4b4bd',
 
     light: {
         text: '#11181C',
