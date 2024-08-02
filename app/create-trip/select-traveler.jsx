@@ -20,7 +20,8 @@ export default function SelectTraveler(){
     },[]);
 
     useEffect(()=>{
-       setTripData({...tripData,
+       setTripData({
+           ...tripData,
            traveler:selectedTraveler
         })
     },[selectedTraveler]);
@@ -59,7 +60,7 @@ export default function SelectTraveler(){
                             marginVertical:10
                         }}>
                             <OptionCard option={item}
-                            selectedTraveler={selectedTraveler}
+                            selectedOption={selectedTraveler}
                             />
                         </TouchableOpacity>
                         )}
