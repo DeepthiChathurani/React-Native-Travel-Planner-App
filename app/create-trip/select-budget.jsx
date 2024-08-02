@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {View, Text, FlatList, TouchableOpacity, ToastAndroid} from 'react-native';
-import {Link, useNavigation, useRouter} from "expo-router";
+import {useNavigation, useRouter} from "expo-router";
 import {SelectBudgetOptions} from "../../constants/Options";
 import OptionCard from "../../components/CreateTrip/OptionCard";
 import {Colors} from "../../constants/Colors";
@@ -32,7 +32,7 @@ export default function selectBudget(){
 
             return ;
         }
-        router.push('');
+        router.push('/create-trip/review-trip');
     }
 
     return(
