@@ -1,16 +1,18 @@
 import React, {useContext, useEffect} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {useNavigation} from "expo-router";
+import {useNavigation, useRouter} from "expo-router";
 import {CreateTripContext} from "../../contex/CreateTripContext";
 import {Colors} from "../../constants/Colors";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import moment from "moment";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
+
 export default function ReviewTrip() {
 
     const navigation = useNavigation();
     const {tripData} = useContext(CreateTripContext);
+    const router = useRouter();
 
     useEffect(() => {
         navigation.setOptions({
@@ -130,7 +132,7 @@ export default function ReviewTrip() {
 
             </View>
             <TouchableOpacity
-                // onPress={()=>onClickContinue()}
+                onPress={()=>router.replace('/create-trip/generate-trip')}
                 style={{
                     padding:15,
                     backgroundColor:Colors.Black,

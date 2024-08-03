@@ -5,6 +5,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import {useNavigation, useRouter} from "expo-router";
 import {CreateTripContext} from "@/contex/CreateTripContext";
 
+
 export default function searchPlace(){
 
      const navigation = useNavigation();
