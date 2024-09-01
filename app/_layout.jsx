@@ -1,6 +1,6 @@
 import {Stack} from "expo-router";
 import {useFonts} from "expo-font";
-import {CreateTripContext} from "@/contex/CreateTripContext";
+import {CreateTripContext} from "../contex/CreateTripContext";
 import React, {useState} from "react";
 
 export default function RootLayout() {
@@ -16,7 +16,7 @@ export default function RootLayout() {
     return (
         <CreateTripContext.Provider value={{tripData, setTripData}}>
             <Stack screenOptions={{
-                headerShown: false
+                headerShown:false
             }}>
                 {/*<Stack.Screen name="index" options={{*/}
                 {/*    headerShown: false*/}

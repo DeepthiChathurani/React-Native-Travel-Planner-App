@@ -1,16 +1,18 @@
 import React, {useEffect, useState, useContext} from 'react';
 import {View, Text, TouchableOpacity, ToastAndroid,} from 'react-native';
-import {Link, useNavigation, useRouter} from "expo-router";
+import { useNavigation, useRouter} from "expo-router";
 import {Colors} from "../../constants/Colors";
 import CalendarPicker from "react-native-calendar-picker";
 import moment from "moment";
+import {CreateTripContext} from "../../contex/CreateTripContext";
+
 
 export default function SelectDates() {
 
     const navigation = useNavigation();
     const [startDate,setStartDate] = useState();
     const [endDate,setEndDate] = useState();
-    const {tripData,setTripData}=useContext();
+    const {tripData,setTripData}=useContext(CreateTripContext);
     const router = useRouter();
 
     useEffect(()=>{
@@ -22,19 +24,19 @@ export default function SelectDates() {
     },[]);
 
     const onDateChange=(date,type)=>{
-        console.log(sate,type);
+        console.log(date,type);
         if(type==='START_DATE'){
            setStartDate(moment(date));
         }else{
-            setEndDate(moment(data));
+            setEndDate(moment(date));
         }
     }
     const OnDateSelectionContinue=()=>{
-        if(!startDate&& !endDate){
+        if(!startDate&&!endDate){
             ToastAndroid.show('Please select Start and End Date',ToastAndroid.LONG);
             return ;
         }
-        const totalNoOfDays=endDate.diff(startDate,'days');
+        const totalNoOfDays = endDate.diff(startDate,'days');
         console.log(totalNoOfDays+1);
         setTripData({
             ...tripData,
@@ -58,7 +60,7 @@ export default function SelectDates() {
          }}>Travel Dates</Text>
 
          <View style={{
-             marginTop:30
+             marginTop:20
          }}>
              <CalendarPicker
                  onDateChange={onDateChange}

@@ -45,11 +45,12 @@ export default function selectBudget(){
             <Text style={{
                 fontSize:30,
                 fontFamily:'outfit-bold',
-                marginTop:20
+                marginTop:5,
+                marginLeft:35
             }}> Budget</Text>
 
             <View style={{
-              marginTop:20
+              marginTop:10
             }}>
                 <Text style={{
                     fontFamily:'outfit-bold',

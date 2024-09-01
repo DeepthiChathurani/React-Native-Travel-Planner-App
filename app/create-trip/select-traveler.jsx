@@ -4,6 +4,7 @@ import {Link, useNavigation} from "expo-router";
 import {Colors} from "../../constants/Colors";
 import {SelectTravelersList} from "../../constants/Options";
 import OptionCard from "../../components/CreateTrip/OptionCard";
+import {CreateTripContext} from "../../contex/CreateTripContext";
 
 export default function SelectTraveler(){
 
@@ -32,28 +33,29 @@ export default function SelectTraveler(){
 
     return(
         <View style={{
-            padding:25,
+            padding:15,
             paddingTop:75,
             backgroundColor:Colors.WHITE,
             height:'100%'
         }}>
             <Text style={{
-                fontSize:35,
+                fontSize:32,
                 fontFamily:'outfit-bold',
-                marginTop:20
+                marginLeft:45,
+                marginTop:-22
             }}> Who's Traveling</Text>
 
             <View style={{
-                marginTop:20
+                marginTop:5
             }}>
                 <Text style={{
-                    fontSize:25,
+                    fontSize:22,
                     fontFamily:'outfit-bold',
                 }}>Choose your travelers</Text>
 
                 <FlatList
                     data={SelectTravelersList}
-                    renderItem={({item, index})=>(
+                    renderItem={({item})=>(
                         <TouchableOpacity
                             onPress={()=>setSelectedTraveler(item)}
                             style={{
@@ -70,10 +72,10 @@ export default function SelectTraveler(){
 
             <TouchableOpacity
                 style={{
-                padding:15,
+                padding:5,
                 backgroundColor:Colors.Black,
                 borderRadius:15,
-                marginTop:20
+                marginTop:5
             }}>
                 <Link href={'/create-trip/select-dates'}
                       style={{
@@ -81,7 +83,7 @@ export default function SelectTraveler(){
                           textAlign:'center',
                       }}>
                 <Text style={{
-                    fontSize:20,
+                    fontSize:18,
                     fontFamily:'outfit-semiBold',
                     textAlign: 'center',
                     color:Colors.WHITE,

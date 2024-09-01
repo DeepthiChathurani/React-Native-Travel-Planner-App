@@ -4,6 +4,7 @@ import {Colors} from "../../constants/Colors";
 import {AI_PROMPT} from "../../constants/Options";
 import {useRouter} from "expo-router";
 import {auth, db} from "../../Configs/FirebaseConfig";
+import {CreateTripContext} from "../../contex/CreateTripContext";
 
 export default function GenerateTrip() {
     const {tripData, setTripData} = useContext(CreateTripContext);
@@ -39,7 +40,7 @@ export default function GenerateTrip() {
             tripData: JSON.stringify(tripData)  ,
             docId: docId// user selection data
         })
-            router.push('(tabs)/mytrip');
+            // router.push('(tabs)/mytrip');
 
     }
 

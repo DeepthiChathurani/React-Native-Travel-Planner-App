@@ -3,10 +3,15 @@ import {Text, View} from "react-native";
 import {Colors} from "../../constants/Colors";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import StartNewTripCard from "../../components/MyTrips/StartNewTripCard";
+import {auth, db} from "../../Configs/FirebaseConfig";
 
 export default function mytTrip(){
 
     const [userTrips,setUserTrips] = useState([]);
+    const user = auth.currentUser
+    const GetMyTrips=()=>{
+        const q = query(collection(db,"UserTrip"),where('userEmail','==',user?.email))
+    }
 
     return(
         <View style={{

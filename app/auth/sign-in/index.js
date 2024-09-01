@@ -48,9 +48,9 @@ export default function SignIn() {
     return (
         <View style={{
             padding: 25,
-            marginTop: 2,
+            marginTop: 1,
             backgroundColor: Colors.WHITE,
-            paddingTop: 80,
+            paddingTop: 25,
             height: '100%'
         }}>
             <TouchableOpacity onPress={() => router.back()}>
@@ -59,28 +59,28 @@ export default function SignIn() {
             <Text style={{
                 fontFamily: 'outfit-bold',
                 fontSize: 30,
-                marginLeft: 20,
-                marginTop: 20
+                marginLeft: 23,
+                marginTop: 8
             }}>Let's Sign You In</Text>
 
             <Text style={{
                 fontFamily: 'outfit-bold',
                 fontSize: 28,
                 color: Colors.GRAY,
-                marginTop: 20,
-                marginLeft: 20
+                marginTop: 10,
+                marginLeft: 23
             }}>Welcome Back</Text>
 
             <Text style={{
                 fontFamily: 'outfit-bold',
                 fontSize: 28,
                 color: Colors.GRAY,
-                marginTop: 20,
-                marginLeft: 20
+                marginTop: 6,
+                marginLeft: 23
             }}>You've been missed</Text>
             {/*------------------ Email-------------------*/}
             <View style={{
-                marginTop: 50
+                marginTop: 18
             }}>
                 <Text style={{
                     fontFamily: 'outfit-regular',
@@ -93,7 +93,7 @@ export default function SignIn() {
             </View>
             {/*------------------ Password-------------------*/}
             <View style={{
-                marginTop: 30
+                marginTop: 18
             }}>
                 <Text style={{
                     fontFamily: 'outfit-regular',
@@ -111,7 +111,7 @@ export default function SignIn() {
                                   padding: 20,
                                   backgroundColor: Colors.Lime,
                                   borderRadius: 15,
-                                  marginTop: 50
+                                  marginTop: 30
                               }}>
                 <Text style={{
                     color: Colors.WHITE,
@@ -126,7 +126,7 @@ export default function SignIn() {
                     padding: 20,
                     backgroundColor: Colors.WHITE,
                     borderRadius: 15,
-                    marginTop: 50,
+                    marginTop: 20,
                     borderWidth: 1
                 }}>
                 <Text style={{

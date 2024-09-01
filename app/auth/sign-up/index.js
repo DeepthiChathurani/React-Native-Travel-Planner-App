@@ -59,12 +59,12 @@ export default function SignUp(){
                 fontFamily:'outfit-bold',
                 fontSize:30,
                 marginLeft:25,
-                marginTop:38
+                marginTop:15
             }}>Create New Account</Text>
 
             {/*------------------User Full Name-------------------*/}
             <View style={{
-                marginTop: 50
+                marginTop: 35
             }}>
                 <Text style={{
                     fontFamily: 'outfit-regular',

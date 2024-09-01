@@ -32,7 +32,8 @@ export default function ReviewTrip() {
             <Text style={{
                 fontSize: 25,
                 fontFamily: 'outfit-bold',
-                marginTop: 20
+                marginTop: 5,
+                marginLeft:35
             }}>Review Your Trip</Text>
 
             <View style={{
@@ -48,17 +49,17 @@ export default function ReviewTrip() {
                     marginTop: 40,
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: 20
+                    gap: 10
                 }}>
                     <Ionicons name="location-sharp" size={34} color="black"/>
 
                         <Text style={{
-                            fontSize: 20,
+                            fontSize: 18,
                             fontFamily: 'outfit-semiBold',
                             color: Colors.GRAY,
                         }}>Destination</Text>
                         <Text style={{
-                            fontSize: 20,
+                            fontSize: 18,
                             fontFamily: 'outfit-regular',
                         }}>{tripData?.locationInfo?.name}</Text>
                 </View>
@@ -68,20 +69,20 @@ export default function ReviewTrip() {
                     marginTop: 30,
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: 20
+                    gap: 10
                 }}>
-                    <Ionicons name="calendar-sharp" size={34} color="blue" />
+                    <Ionicons name="calendar-sharp" size={32} color="blue" />
 
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-semiBold',
                         color: Colors.GRAY,
                     }}>Travel Date</Text>
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-regular',
-                    }}>{moment(tripData?.startDate).format('DD MM')+"To"+
-                        moment(tripData.endDate).format('DD MM')+"  "}
+                    }}>{moment(tripData?.startDate).format('DD/MM')+" To "+
+                        moment(tripData.endDate).format('DD/MM')+"  "}
                         ({tripData.totalNoOfDays}days)
                     </Text>
                 </View>
@@ -91,17 +92,17 @@ export default function ReviewTrip() {
                     marginTop: 30,
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: 20
+                    gap: 10
                 }}>
-                    <Ionicons name="car-sharp" size={24} color="yellow" />
+                    <Ionicons name="car-sharp" size={30} color="yellow" />
 
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-semiBold',
                         color: Colors.GRAY,
                     }}>Who is traveling</Text>
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-regular',
                     }}>
                         {tripData?.traveler?.title}
@@ -113,17 +114,17 @@ export default function ReviewTrip() {
                     marginTop: 30,
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: 20
+                    gap: 10
                 }}>
-                    <FontAwesome name="money" size={34} color="green" />
+                    <FontAwesome name="money" size={30} color="green" />
 
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-semiBold',
                         color: Colors.GRAY,
                     }}>Budget</Text>
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 18,
                         fontFamily: 'outfit-regular',
                     }}>
                         {tripData?.budget}

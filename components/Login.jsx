@@ -12,23 +12,23 @@ export default function Login() {
             <Image source={require('../assets/images/login.jpeg')}
                    style={{
                        width: '100%',
-                       height: 450
+                       height: 400
                    }}
             />
             <View style={styles.container}>
                 <Text style={{
-                    fontSize: 32,
+                    fontSize: 30,
                     fontFamily: 'outfit-bold',
                     textAlign: 'center',
-                    marginTop: 20
+                    marginTop: 2
                 }}>AI Travel Planner</Text>
 
                 <Text style={{
-                    fontSize: 22,
+                    fontSize: 20,
                     fontFamily: 'outfit-regular',
                     textAlign: 'center',
                     color: Colors.GRAY,
-                    marginTop: 20
+                    marginTop: 11
                 }}>
                     Discover your next adventure effortlessly. Personalized itineraries at your fingertips,
                     Travel smarter with AI-driven insights.
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: Colors.PRIMARY,
         borderRadius: 99,
-        marginTop: '18%'
+        marginTop: 5
     }
 })
 
